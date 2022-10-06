@@ -1,0 +1,21 @@
+
+<header >
+    <h1 *ngIf="fejlecon">Helló világ!</h1>
+
+    <p>{{nev}}</p>
+    <input value="{{nev}}" />
+    <input [value]="nev" />
+    <br>    
+    <input [(ngModel)]="nev" />
+
+    <form action="">
+        <div *ngFor="let szin of szinek">
+            <input type="radio"  name="zssdfjs[]" />
+            <label>{{szin}}</label>
+        </div>
+        
+    </form>
+</header>
+
+<br>
+<input type="button" value="Kattints!" (click)="kattintas();"/>
